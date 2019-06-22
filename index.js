@@ -5,10 +5,10 @@ var app = express();
 app.set('view engine', 'ejs')
 
 var me = {
-          "description": "I am someone who likes to take things in stride. I enjoy running, playing intramural sports, cats and dogs and most importantly, I love improving myself mentally and physically - which is why I really enjoy web development. It is very hard but so rewarding",
-          "tech": "I am excited by the chance to make lives easier. I enjoy making things more efficient and I like the idea that I could create something people never realized they needed so much, but now they couldn't live without it",
-          "techstack": "what is your preferred tech stack",
-          "hobbies": "what are your fav hobbies"
+          "description": "I am someone who likes to take things in stride and I am for self improvement both physically and mentally.",
+          "tech": "I am excited by the chance to make lives easier. I enjoy making things more efficient and I like the idea that I could create something people never realized they needed so much and now couldn't live without.",
+          "techstack": "I am proficient with Python, Flask and React.",
+          "hobbies": "I enjoy running, playing intramural sports, taking care of cats and most importantly, I love improving myself mentally and physically - I really enjoy web development in this regard because it is very hard but also very rewarding work."
           }
   
 
