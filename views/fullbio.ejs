@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style>
+            .param   {font-size: 16px; color: #3cb371;}
+            .description {font-size: 12px; color: #4A4A4A;}
+        </style>
+        <title> <%= fullbio %> </title>
+    </head>
+    
+    <body>
+            <% Object.keys(data).forEach( (key) => { %>
+                <p class="param"> <%=key%> </p> 
+                <p class="description"><%= data[key] %></p>
+            <% }) %>
+
+    </body>
+
+
+</html>
