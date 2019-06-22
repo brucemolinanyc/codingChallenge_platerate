@@ -11,8 +11,6 @@ var me = {
           "hobbies": "I enjoy running, playing intramural sports, taking care of cats and most importantly, I love improving myself mentally and physically - I really enjoy web development in this regard because it is very hard but also very rewarding work."
           }
   
-
-
 app.get('/', (req, rep) => {
     rep.sendFile(__dirname + '/index.html')
 })
@@ -23,7 +21,7 @@ app.get('/posts', (req, rep) => {
         if (!error && response.statusCode === 200) {
           rep.render('posts', {posts: JSON.parse(body)} );
         } else {
-            console.log(error);
+            rep.render('error')
         }
     })
 })
@@ -37,15 +35,14 @@ app.get('/aboutme/:param', (req, rep) => {
         rep.render('aboutme', { about :  me[req.params.param], param: req.params.param })
     }
     else {
-        rep.status(404).render('Not Found')
+        rep.render('error')
     }
 })
 
 // * Any request to an endpoint that is not defined should ‘Not Found’ as plain text
 app.get('*', (req, rep) => {
-    rep.status(404).render('Not Found')
+    rep.render('error')
 })
-
 
 
 

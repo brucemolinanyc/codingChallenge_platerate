@@ -10,15 +10,13 @@
     
     <body>
         <ol>
-        <% posts.forEach( (post, idx) => { %>
+        <% posts.forEach( (post) => { %>
             <li class="title">                   
                 <p > <%=post.title%> </p> 
                 <p class="body"><%= post.body %></p>
             </li> 
         <% }) %>
         </ol>
-
-        <!-- <%= posts %> -->
     </body>
 
 
